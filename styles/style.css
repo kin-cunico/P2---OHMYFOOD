@@ -2,11 +2,14 @@
 :root {
   --primary: #9356dc;
   --primary_hover: #af6eff;
+  --primary_light: #9256dc20;
   --secondary: #ff79da;
   --secondary_hover: #ff9de3;
   --tertiary: #99e2d0;
+  --tertiary_darker: #568177;
   --light_grey: #f5f5f5;
   --darker_grey: #c6c6c6;
+  --almost_black: #333333;
 }
 
 * {
@@ -83,18 +86,99 @@ body {
   background: linear-gradient(170deg, var(--secondary_hover) 0%, var(--primary_hover) 100%);
 }
 
+/* steps container */
 .steps_container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 25px;
 }
 .steps_container--chose {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
   background-color: var(--light_grey);
   height: 70px;
   border-radius: 20px;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+.steps_container--chose > h5 {
+  position: absolute;
+  left: -13px;
+  top: 23px;
+  border-radius: 60px;
+  background-color: var(--primary);
+  width: 25px;
+  height: 25px;
+  color: var(--light_grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps_container--chose > i {
+  color: var(--darker_grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 24px;
+}
+.steps_container--chose > p {
+  color: var(--almost_black);
+  font-size: 16px;
+  display: flex;
+  width: 250px;
+}
+.steps_container--chose.--chosen {
+  background-color: var(--primary_light);
+}
+
+/* restaurants container */
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--darker_grey);
+  gap: 20px;
+}
+.restaurants__container--restaurant {
+  display: flex;
+  background-color: var(--light_grey);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--almost_black);
+}
+.restaurants__container--restaurant > figure {
+  width: 100%;
+  position: relative;
+  padding: 0 0 10px 0;
+}
+.restaurants__container--restaurant > figure > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  height: 75%;
+}
+.restaurants__container--restaurant > figure > figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+  gap: 5px;
+}
+.restaurants__container--restaurant > figure > h3 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--tertiary);
+  color: var(--tertiary_darker);
+  padding: 5px 25px;
+  margin: 5px 0;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

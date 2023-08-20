@@ -14,6 +14,13 @@
 			rel="stylesheet"
 			href="styles/style.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<title>Ohmyfood</title>
 	</head>
 	<!-- FIX - add icon to navbar, and change div to semantic tag -->
@@ -40,10 +47,56 @@
 		<section class="steps_container">
 			<h2>How it works</h2>
 			<div class="steps_container--chose">
-				<p>1</p>
-				<!-- TODO - add phone icon -->
+				<h5>1</h5>
+				<!-- REVIEW - add phone icon -->
+				<i
+					class="fa fa-mobile"
+					aria-hidden="true"
+				></i>
 				<p>Chose a restaurant</p>
 			</div>
+			<div class="steps_container--chose">
+				<h5>2</h5>
+				<!-- FIX - add correct menu icon -->
+				<i
+					class="fa fa-bars"
+					aria-hidden="true"
+				></i>
+				<p>Create your menu</p>
+			</div>
+			<div class="steps_container--chose --chosen">
+				<h5>3</h5>
+				<!-- FIX - add correct restaurant icon -->
+				<i
+					class="fa fa-cutlery"
+					aria-hidden="true"
+				></i>
+				<p>Go enjoy it at the restaurant</p>
+			</div>
+		</section>
+		<!-- TODO - Restaurants container -- FIX correct alt-->
+		<section class="restaurants__container">
+			<h2>Restaurants</h2>
+
+			<!-- REVIEW - add and position heart -->
+			<a
+				href="#"
+				target="_blank"
+				class="restaurants__container--restaurant"
+			>
+				<figure>
+					<img
+						src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+						alt="restaurant image "
+					/>
+					<figcaption>
+						<h2>Restaurant Name</h2>
+						<p>City name</p>
+					</figcaption>
+					<h3>New</h3>
+					<!-- TODO - add heart icon -->
+				</figure>
+			</a>
 		</section>
 	</body>
 </html>
