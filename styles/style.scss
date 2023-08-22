@@ -1,23 +1,49 @@
+$fa-font-path: "../webfonts";
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+@import "../fontawesome-free-6.4.2-web/scss/fontawesome.scss";
+@import "../fontawesome-free-6.4.2-web/scss/solid.scss";
 
-:root {
-	--primary: #9356dc;
-	--primary_hover: #af6eff;
-	--primary_light: #9256dc20;
-	--secondary: #ff79da;
-	--secondary_hover: #ff9de3;
-	--tertiary: #99e2d0;
-	--tertiary_darker: #568177;
-	--light_grey: #f5f5f5;
-	--darker_grey: #c6c6c6;
-	--almost_black: #333333;
+/* global colors, mixins, and extensions/placeholders */
+$primary: #9356dc;
+$primary_darker: darken($primary, 10%);
+$primary_hover: lighten($primary, 10%);
+$primary_light: transparentize($primary, 0.8);
+$secondary: #ff79da;
+$secondary_hover: lighten($secondary, 10%);
+$tertiary: #99e2d0;
+$tertiary_darker: darken($tertiary, 50%);
+$light_grey: #f5f5f5;
+$darker_grey: darken($light_grey, 10%);
+$almost_black: darken($darker_grey, 50%);
+$transparent_black: transparentize($almost_black, 0.8);
+$shadow: 1px 2px 5px 1px;
+
+@mixin primary-box-shadow($color: $transparent_black, $shadow: $shadow) {
+	box-shadow: $shadow $color;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+%icons {
+	font-size: 24px;
+	font-weight: 400;
+	position: absolute;
+	right: 40px;
 }
+
+/* heart animation for favorites */
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 0.5;
+		z-index: 1;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
 /* navbar section: mobile */
 .navbar {
 	display: flex;
@@ -39,9 +65,9 @@
 			width: 100%;
 			height: 50px;
 			border: none;
+			@include primary-box-shadow;
 			text-align: center;
-			box-shadow: 1px -1px 1px 1px rgba(0, 0, 0, 0.2);
-			background-color: var(--darker_grey);
+			background-color: $darker_grey;
 			font-weight: 900;
 		}
 	}
@@ -58,11 +84,11 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	height: 300px;
-	background-color: var(--light_grey);
+	background-color: $light_grey;
 	padding: 30px;
 	gap: 20px;
 	> p {
-		color: var(--darker_grey);
+		color: $darker_grey;
 		text-align: center;
 		font-size: 18px;
 	}
@@ -73,22 +99,18 @@ body {
 		height: 50px;
 		padding: 10px 20px;
 		border-radius: 25px;
-		background: linear-gradient(
-			170deg,
-			var(--secondary) 0%,
-			var(--primary) 100%
-		);
+		background: linear-gradient(170deg, $secondary 0%, $primary 100%);
 		outline: none;
 		border: none;
-		color: var(--light_grey);
+		color: $light_grey;
 		font-weight: bold;
-		box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+		@include primary-box-shadow;
 		&:hover {
 			cursor: pointer;
 			background: linear-gradient(
 				170deg,
-				var(--secondary_hover) 0%,
-				var(--primary_hover) 100%
+				$secondary_hover 0%,
+				$primary_hover 100%
 			);
 		}
 	}
@@ -105,10 +127,10 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-		background-color: var(--light_grey);
+		background-color: $light_grey;
 		height: 70px;
 		border-radius: 20px;
-		box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+		@include primary-box-shadow;
 		font-weight: bold;
 		position: relative;
 		text-align: center;
@@ -119,16 +141,16 @@ body {
 			left: -13px;
 			top: 23px;
 			border-radius: 60px;
-			background-color: var(--primary);
+			background-color: $primary;
 			width: 25px;
 			height: 25px;
-			color: var(--light_grey);
+			color: $light_grey;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
 		> i {
-			color: var(--darker_grey);
+			color: $darker_grey;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -136,13 +158,13 @@ body {
 			font-size: 24px;
 		}
 		> p {
-			color: var(--almost_black);
+			color: $almost_black;
 			font-size: 16px;
 			display: flex;
 			width: 250px;
 		}
 		&.--chosen {
-			background-color: var(--primary_light);
+			background-color: $primary_light;
 		}
 	}
 }
@@ -153,14 +175,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	background-color: var(--darker_grey);
+	background-color: $darker_grey;
 	gap: 20px;
 	&--restaurant {
 		display: flex;
-		background-color: var(--light_grey);
+		background-color: $light_grey;
 		border-radius: 20px;
 		text-decoration: none;
-		color: var(--almost_black);
+		color: $almost_black;
 		> figure {
 			width: 100%;
 			position: relative;
@@ -176,14 +198,15 @@ body {
 				flex-direction: column;
 				align-items: start;
 				padding: 10px;
+				position: relative;
 				gap: 5px;
 			}
 			> h3 {
 				position: absolute;
 				top: 10px;
 				right: 10px;
-				background-color: var(--tertiary);
-				color: var(--tertiary_darker);
+				background-color: $tertiary;
+				color: $tertiary_darker;
 				padding: 5px 25px;
 				margin: 5px 0;
 				font-size: 14px;
