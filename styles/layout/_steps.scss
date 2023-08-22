@@ -1,0 +1,50 @@
+.steps_container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 25px;
+	&--chose {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background-color: $light_grey;
+		height: 70px;
+		border-radius: 20px;
+		@include primary-box-shadow;
+		font-weight: bold;
+		position: relative;
+		text-align: center;
+		padding: 0 20px;
+		gap: 20px;
+		> h5 {
+			position: absolute;
+			left: -13px;
+			top: 23px;
+			border-radius: 60px;
+			background-color: $primary;
+			width: 25px;
+			height: 25px;
+			color: $light_grey;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		> i {
+			color: $darker_grey;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			font-size: 24px;
+		}
+		> p {
+			color: $almost_black;
+			font-size: 16px;
+			display: flex;
+			width: 250px;
+		}
+		&.--chosen {
+			background-color: $primary_light;
+		}
+	}
+}

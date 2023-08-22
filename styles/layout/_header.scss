@@ -1,0 +1,18 @@
+.explore__containter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 300px;
+	background-color: $light_grey;
+	padding: 30px;
+	gap: 20px;
+	> p {
+		color: $darker_grey;
+		text-align: center;
+		font-size: 18px;
+	}
+	> h1 {
+		font-weight: bold;
+	}
+}

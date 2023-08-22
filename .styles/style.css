@@ -8315,6 +8315,25 @@ button:hover {
   font-weight: 900;
 }
 
+.explore__containter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  background-color: #f5f5f5;
+  padding: 30px;
+  gap: 20px;
+}
+.explore__containter > p {
+  color: gainsboro;
+  text-align: center;
+  font-size: 18px;
+}
+.explore__containter > h1 {
+  font-weight: bold;
+}
+
 .steps_container {
   display: flex;
   flex-direction: column;
@@ -8387,8 +8406,7 @@ button:hover {
 }
 .restaurants__container--restaurant > figure > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px 20px 0 0;
   height: 75%;
 }
@@ -8411,5 +8429,4 @@ button:hover {
   font-size: 14px;
 }
 
-/* navbar section: mobile */
-/* body section: mobile *//*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

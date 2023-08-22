@@ -1,0 +1,11 @@
+{
+	"name": "p2---ohmyfood",
+	"version": "1.0.0",
+	"description": "2nd project for OpenClassrooms' Front-End Developer course",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch styles/style.scss styles/style.css"
+	},
+	"author": "Kin Cunico",
+	"license": "ISC"
+}

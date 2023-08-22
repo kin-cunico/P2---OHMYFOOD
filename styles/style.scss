@@ -1,216 +1,24 @@
 $fa-font-path: "../webfonts";
-
+/**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 @import "../fontawesome-free-6.4.2-web/scss/fontawesome.scss";
 @import "../fontawesome-free-6.4.2-web/scss/solid.scss";
 
-/* global colors, mixins, and extensions/placeholders */
-$primary: #9356dc;
-$primary_darker: darken($primary, 10%);
-$primary_hover: lighten($primary, 10%);
-$primary_light: transparentize($primary, 0.8);
-$secondary: #ff79da;
-$secondary_hover: lighten($secondary, 10%);
-$tertiary: #99e2d0;
-$tertiary_darker: darken($tertiary, 50%);
-$light_grey: #f5f5f5;
-$darker_grey: darken($light_grey, 10%);
-$almost_black: darken($darker_grey, 50%);
-$transparent_black: transparentize($almost_black, 0.8);
-$shadow: 1px 2px 5px 1px;
+/**/
+@import "utils/_variables.scss";
+@import "utils/_functions.scss";
+@import "utils/_mixins.scss";
+@import "utils/_placeholders.scss";
+@import "utils/_animations.scss";
 
-@mixin primary-box-shadow($color: $transparent_black, $shadow: $shadow) {
-	box-shadow: $shadow $color;
-}
+/**/
+@import "base/_base.scss";
 
-%icons {
-	font-size: 24px;
-	font-weight: 400;
-	position: absolute;
-	right: 40px;
-}
-
-/* heart animation for favorites */
-
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-		opacity: 0.5;
-		z-index: 1;
-	}
-	100% {
-		transform: scale(1.5);
-		opacity: 0;
-	}
-}
-
-/* navbar section: mobile */
-.navbar {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-	width: 100%;
-	> h1 {
-		font-family: "Shrikhand", cursive;
-		margin: 0;
-		padding: 20px 0 0 10px;
-	}
-	> .navbar__input--container {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		> .navbar__input--container__input {
-			width: 100%;
-			height: 50px;
-			border: none;
-			@include primary-box-shadow;
-			text-align: center;
-			background-color: $darker_grey;
-			font-weight: 900;
-		}
-	}
-}
-
-/* body section: mobile */
-body {
-	font-family: "Roboto", sans-serif;
-}
-
-.explore__containter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	height: 300px;
-	background-color: $light_grey;
-	padding: 30px;
-	gap: 20px;
-	> p {
-		color: $darker_grey;
-		text-align: center;
-		font-size: 18px;
-	}
-	> h1 {
-		font-weight: bold;
-	}
-	> button {
-		height: 50px;
-		padding: 10px 20px;
-		border-radius: 25px;
-		background: linear-gradient(170deg, $secondary 0%, $primary 100%);
-		outline: none;
-		border: none;
-		color: $light_grey;
-		font-weight: bold;
-		@include primary-box-shadow;
-		&:hover {
-			cursor: pointer;
-			background: linear-gradient(
-				170deg,
-				$secondary_hover 0%,
-				$primary_hover 100%
-			);
-		}
-	}
-}
-
-/* steps container */
-
-.steps_container {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	padding: 25px;
-	&--chose {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		background-color: $light_grey;
-		height: 70px;
-		border-radius: 20px;
-		@include primary-box-shadow;
-		font-weight: bold;
-		position: relative;
-		text-align: center;
-		padding: 0 20px;
-		gap: 20px;
-		> h5 {
-			position: absolute;
-			left: -13px;
-			top: 23px;
-			border-radius: 60px;
-			background-color: $primary;
-			width: 25px;
-			height: 25px;
-			color: $light_grey;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		> i {
-			color: $darker_grey;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: transparent;
-			font-size: 24px;
-		}
-		> p {
-			color: $almost_black;
-			font-size: 16px;
-			display: flex;
-			width: 250px;
-		}
-		&.--chosen {
-			background-color: $primary_light;
-		}
-	}
-}
-
-/* restaurants container */
-
-.restaurants__container {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	background-color: $darker_grey;
-	gap: 20px;
-	&--restaurant {
-		display: flex;
-		background-color: $light_grey;
-		border-radius: 20px;
-		text-decoration: none;
-		color: $almost_black;
-		> figure {
-			width: 100%;
-			position: relative;
-			padding: 0 0 10px 0;
-			> img {
-				width: 100%;
-				object-fit: cover;
-				border-radius: 20px 20px 0 0;
-				height: 75%;
-			}
-			> figcaption {
-				display: flex;
-				flex-direction: column;
-				align-items: start;
-				padding: 10px;
-				position: relative;
-				gap: 5px;
-			}
-			> h3 {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				background-color: $tertiary;
-				color: $tertiary_darker;
-				padding: 5px 25px;
-				margin: 5px 0;
-				font-size: 14px;
-			}
-		}
-	}
-}
+/**/
+@import "components/_buttons.scss";
+/**/
+@import "layout/_navbar.scss";
+@import "layout/_header.scss";
+@import "layout/_steps.scss";
+@import "layout/_restaurants.scss";
+@import "layout/_footer.scss";
