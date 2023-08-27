@@ -5,7 +5,7 @@
 	gap: 10px;
 	width: 100%;
 	> h1 {
-		font-family: "Shrikhand", cursive;
+		@include Shrikhand;
 		margin: 0;
 		padding: 20px 0 0 10px;
 	}

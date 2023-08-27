@@ -1,0 +1,10 @@
+@mixin Shrikhand() {
+	font-family: "Shrikhand", cursive;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+@mixin Roboto() {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+}

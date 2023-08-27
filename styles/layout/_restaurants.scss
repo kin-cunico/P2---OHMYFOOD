@@ -1,32 +1,47 @@
 .restaurants__container {
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	padding: 40px;
 	background-color: $darker_grey;
 	gap: 20px;
+	> h2 {
+		margin: 0;
+	}
 	&--restaurant {
 		display: flex;
 		background-color: $light_grey;
 		border-radius: 20px;
 		text-decoration: none;
 		color: $almost_black;
+		width: 100%;
 		> figure {
-			width: 100%;
-			position: relative;
 			padding: 0 0 10px 0;
+			margin: 0;
+			position: relative;
 			> img {
 				width: 100%;
 				object-fit: cover;
 				border-radius: 20px 20px 0 0;
-				height: 75%;
 			}
 			> figcaption {
 				display: flex;
 				flex-direction: column;
 				align-items: start;
-				padding: 10px;
+				padding: 10px 20px;
 				position: relative;
 				gap: 5px;
+				> h2 {
+					margin: 0;
+					padding: 0;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				> p {
+					margin: 0;
+					padding: 0;
+					font-size: 14px;
+					font-weight: bold;
+				}
 			}
 			> h3 {
 				position: absolute;
@@ -37,6 +52,24 @@
 				padding: 5px 25px;
 				margin: 5px 0;
 				font-size: 14px;
+			}
+			> i {
+				display: flex;
+				position: absolute;
+				font-size: 24px;
+				right: 30px;
+				bottom: 30px;
+
+				&:active {
+					cursor: pointer;
+					color: transparent;
+					background: linear-gradient(200deg, $primary, $secondary);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 	}

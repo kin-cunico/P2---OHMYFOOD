@@ -9,5 +9,6 @@ $tertiary_darker: darken($tertiary, 50%);
 $light_grey: #f5f5f5;
 $darker_grey: darken($light_grey, 10%);
 $almost_black: darken($darker_grey, 50%);
+$almond_black: darken($almost_black, 20%);
 $transparent_black: transparentize($almost_black, 0.8);
 $shadow: 1px 2px 5px 1px;
