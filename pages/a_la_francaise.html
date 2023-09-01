@@ -7,14 +7,67 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<link
-			type="stylesheet"
-			href="styles/pages/_pages.scss"
+			rel="stylesheet"
+			href="../styles/base/normalize.css"
 		/>
 		<link
-			type="stylesheet"
-			href="styles/base/normalize.css"
+			rel="stylesheet"
+			href="../styles/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
 		/>
 		<title>Ohmyfood</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<nav class="navbar">
+				<!-- FIX - change arrow to arrow icon -->
+				<h1><a href="../index.html">←</a>ohmyfood</h1>
+			</nav>
+		</header>
+		<main class="main__restaurant--container">
+			<img
+				src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+				alt="A La Française photo"
+			/>
+			<section class="main__restaurant--dishes--container">
+				<h2>Bastille</h2>
+				<section>
+					<h4>ENTREES <span id="entree--border"></span></h4>
+					<article>
+						<h5>Citrus Squid Carpaccio</h5>
+						<p>With orange zest <span>25€</span></p>
+					</article>
+					<article>
+						<h5>Grandmother's Vegetable Soup</h5>
+						<p>Carrots, parsnips, Jerusalem artichoke <span>35€</span></p>
+					</article>
+					<article>
+						<h5>Onion Soup</h5>
+						<p>Revisted <span>20€</span></p>
+					</article>
+				</section>
+				<section>
+					<h4>MAIN DISH <span id="main--dish--border"></span></h4>
+					<article>
+						<h5>Citrus Squid Carpaccio</h5>
+						<p>With orange zest <span>25€</span></p>
+					</article>
+					<article>
+						<h5>Grandmother's Vegetable Soup</h5>
+						<p>Carrots, parsnips, Jerusalem artichoke <span>25€</span></p>
+					</article>
+					<article>
+						<h5>Citrus Squid Carpaccio</h5>
+						<p>With orange zest <span>25€</span></p>
+					</article>
+				</section>
+			</section>
+		</main>
+	</body>
 </html>

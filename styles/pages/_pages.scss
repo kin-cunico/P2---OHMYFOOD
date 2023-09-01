@@ -1,0 +1,78 @@
+.main__restaurant--container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 374px;
+	flex-wrap: wrap;
+
+	> img {
+		width: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+	> .main__restaurant--dishes--container {
+		box-sizing: border-box;
+		position: absolute;
+		top: 210px;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		background-color: $light-grey;
+		border-radius: 15px 15px 0 0;
+		padding: 0 15px;
+		> h2 {
+			@include Shrikhand();
+		}
+		> section {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: 10px;
+			> h4 {
+				display: flex;
+				font-weight: 400;
+				font-size: 14px;
+				position: relative;
+				> #entree--border {
+					position: absolute;
+					top: 120%;
+					width: 10%;
+					border: 2px solid $tertiary;
+				}
+				> #main--dish--border {
+					position: absolute;
+					top: 120%;
+					width: 10%;
+					border: 2px solid $tertiary;
+				}
+			}
+			> article {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				background: white;
+				border-radius: 15px;
+				padding: 10px 25px 10px 10px;
+				box-sizing: border-box;
+
+				> p {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					font-size: 14px;
+					> span {
+						font-weight: 700;
+					}
+				}
+				> h5,
+				p {
+					margin: 0;
+					padding: 5px 5px;
+				}
+				> h5 {
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+}
