@@ -1,13 +1,37 @@
-/* heart animation for favorites */
+/*menu hover animation*/
 
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-		opacity: 0.5;
-		z-index: 1;
+@keyframes menuHover {
+	from {
+		transform: translateX(105px);
 	}
-	100% {
-		transform: scale(1.5);
-		opacity: 0;
+	to {
+		transform: translateX(25px);
+	}
+}
+
+@keyframes menuHoverReverse {
+	from {
+		transform: translateX(25px);
+	}
+	to {
+		transform: translateX(105px);
+	}
+}
+
+@keyframes spanHover {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-10px);
+	}
+}
+
+@keyframes spanHoverReverse {
+	from {
+		transform: translateX(-10px);
+	}
+	to {
+		transform: translateX(0);
 	}
 }
